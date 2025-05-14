@@ -11,7 +11,13 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
-        name="(auth)/verifyOtp"
+        name="(auth)/verify-otp"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="(auth)/edit-profile"
         options={{
           headerShown: false,
         }}

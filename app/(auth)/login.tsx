@@ -16,7 +16,7 @@ const login = () => {
   const [email, setEmail] = useState<string>("");
   const router = useRouter();
   const sendOtp = async () => {
-    router.push("/(auth)/verifyOtp");
+    router.push("/(auth)/verify-otp");
     console.log(email);
   };
   return (

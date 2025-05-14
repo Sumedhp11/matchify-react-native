@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -12,6 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const verifyOtp = () => {
   const [otp, setOtp] = useState<string | null>(null);
+  const router = useRouter();
   return (
     <SafeAreaView className="flex-1 bg-white">
       <StatusBar barStyle="dark-content" backgroundColor="white" />
@@ -40,6 +42,7 @@ const verifyOtp = () => {
           <TouchableOpacity
             className="bg-rose-600 py-3.5 rounded-xl items-center justify-center mt-4"
             activeOpacity={0.8}
+            onPress={() => router.replace("/edit-profile")}
           >
             <Text className="text-white font-bold text-base">verify</Text>
           </TouchableOpacity>
